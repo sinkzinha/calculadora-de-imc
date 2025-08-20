@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculadora de IMC</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <h1 class="titulo">Calculadora de IMC</h1>
+
+      <form id="imc-form" class="form" autocomplete="on" novalidate>
+        <div class="campo">
+          <label for="peso">Peso</label>
+          <div class="entrada-com-unidade">
+            <input
+              id="peso"
+              name="peso"
+              type="number"
+              inputmode="decimal"
+              step="0.1"
+              min="1"
+              max="400"
+              placeholder="Ex.: 65.5"
+              required
+            />
+            <span class="unidade">kg</span>
+          </div>
+        </div>
+
+        <div class="campo">
+          <label for="altura">Altura</label>
+          <div class="entrada-com-unidade">
+            <input
+              id="altura"
+              name="altura"
+              type="number"
+              inputmode="decimal"
+              step="0.01"
+              min="0.5"
+              max="2.5"
+              placeholder="Ex.: 1.60"
+              required
+            />
+            <span class="unidade">m</span>
+          </div>
+        </div>
+
+        <button onclick="calcularImc()" id="btn-calcular" type="button" class="botao"> Calcular IMC</button>
+      </form>
+
+      <section
+        id="resultado"
+        class="resultado estado-neutro"
+        role="status"
+        aria-live="polite"
+      >
+        <h2 class="resultado-titulo">Seu IMC</h2>
+        <p id="imc-valor" class="imc-valor">—</p>
+        <p id="imc-texto" class="imc-texto"> Informe seu peso e altura, depois clique em "Calcular IMC".</p>
+      </section>
+
+    <script src="imc.js"></script>
+</body>
+</html>
