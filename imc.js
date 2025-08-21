@@ -28,6 +28,7 @@ function calcularImc() {
             exibirTexto(resultadoImc, 'Normal');
             resultadoContainer.classList.add('estado-normal');
         } else if (resultadoImc > 25 && resultadoImc < 29.9) {
+            exibirTexto(resultadoImc, 'Sobrepeso');
             resultadoContainer.classList.add('estado-sobrepeso');
         } else if (resultadoImc > 30) {
             exibirTexto(resultadoImc, 'Obesidade');
