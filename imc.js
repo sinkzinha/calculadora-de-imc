@@ -14,6 +14,9 @@ function calcularImc() {
 
     let resultadoContainer = document.getElementById('resultado');
 
+
+    resultadoContainer.classList.remove('estado-abaixo', 'estado-normal', 'estado-sobrepeso', 'estado-obesidade', 'estado-neutro');
+
     if (!peso || !altura) {
         alert('Insira peso e altura válidos');
     } else {
